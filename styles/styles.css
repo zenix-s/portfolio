@@ -80,14 +80,6 @@ aside > a:hover::after{
     color: var(--color-4);
 }
 
-@keyframes rotate_icon_list{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(180deg);
-    }
-}
 /* CONTACTO */
 .contact{
     position: absolute;
@@ -176,7 +168,7 @@ aside > a:hover::after{
 /* FOOTER */
 footer{
     background-color: var(--color-3);
-    height: 7vh;
+    height: 5em;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -242,13 +234,24 @@ footer > a:hover{
 
 }
 @media (max-width: 600px){
+    .introduction{
+        justify-content: flex-start;
+        padding-top: 50px;
+    }
     .introduction > h1{
         font-size: 2.5em;
     }
     .introduction > h2{
         font-size: 1.7em;
     }
+    .contact{
+        top: 90vh;
+
+    }
     aside{
+        display: none;
+    }
+    .go_down{
         display: none;
     }
 
