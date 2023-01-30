@@ -22,6 +22,7 @@ body{
     width: 100vw;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    background-color: var(--color-2);
 }
 /* NAVBAR */
 aside{
@@ -35,21 +36,9 @@ aside{
     flex-direction: column;
     justify-content: center;
 }
-aside::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50px;
-    width: 0.15em;
-    height: 100%;
-    background-color: var(--color-4);
-    z-index: -1;
-    opacity: 0.8;
-}
 aside > a{
     text-decoration: none;
     color: var(--color-4);
-    background-color: var(--color-3);
     font-size: 1.5rem;
     padding: 15px 0;
     transition: color 0.2s ease;
@@ -158,6 +147,10 @@ aside > a:hover::after{
 
 
 /* SECOND SECTION ABOUT ME */
+.about_me{
+    background-color: var(--color-2);
+}
+
 
 /* THIRD SECTION PROYECTS */
 
