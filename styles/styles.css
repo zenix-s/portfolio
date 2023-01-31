@@ -94,7 +94,7 @@ aside > a:hover::after{
 }
 /* FIRST SECTION INTRODUCTION */
 .introduction{
-    background-color: var(--color-3);
+    background-color: var(--color-1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,7 +128,7 @@ aside > a:hover::after{
     animation: typewriter 2s steps(22) 1s 1 normal forwards;
 }
 .introduction > h2::before{
-    background: var(--color-3);
+    background: var(--color-1);
     animation: typewriter 2s steps(22) 1s 1 normal forwards;
 }
 
@@ -149,6 +149,38 @@ aside > a:hover::after{
 /* SECOND SECTION ABOUT ME */
 .about_me{
     background-color: var(--color-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+.about_me > h2{
+    font-size: 5em;
+    color: var(--color-4);
+    margin: 10px 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'roboto mono', monospace;
+}
+.about_me_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--color-4);
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+}
+.about_me_container > p{
+    font-size: 1.2em;
+    color: var(--color-1);
+    margin: 10px 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'roboto', sans-serif;
 }
 
 
@@ -227,10 +259,11 @@ footer > a:hover{
 
 }
 @media (max-width: 600px){
-    .introduction{
-        justify-content: flex-start;
-        padding-top: 50px;
+    .introduction > h1,
+    .introduction > h2{
+        transform: translateY(-35%);
     }
+
     .introduction > h1{
         font-size: 2.5em;
     }
@@ -238,7 +271,11 @@ footer > a:hover{
         font-size: 1.7em;
     }
     .contact{
-        top: 90vh;
+        top: auto;
+        margin: 0;
+        padding: 10px 0;
+        bottom: 10px;
+        height: max-content;
 
     }
     aside{
