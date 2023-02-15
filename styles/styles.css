@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300&family=Roboto:wght@100;300;400;700&display=swap');
 :root{
-    --color-1: #1E2022;
+    --color-1: #17181d;
     --color-2: #303841;
     --color-3: #3a4550;
     --color-3: #52616B;
@@ -119,6 +119,13 @@ a:hover::before{
     margin: 10px 0;
     font-weight: 300;
     text-transform: uppercase;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.426);
+    -webkit-box-shadow: 0 0 32px 32px #00000070;
+    -moz-box-shadow: 0 0 32px 32px #0000006b;
+    box-shadow: 0 0 32px 32px #00000069;
+    backdrop-filter: blur(1px);
+    
 }
 .introduction > h2{
     font-family: 'roboto mono', monospace;
