@@ -7,7 +7,9 @@
     --color-4: #C9D6DF;
     --color-5: #F0F5F9;
     --color-6: #EEEEEE;
-    --color-7: #D72323;
+    --color-7: #8b0303;
+    --color-8: #df6767;
+    --color-9: #ff0000;
 }
 html{
     scroll-behavior: smooth;
@@ -22,7 +24,22 @@ body{
     width: 100vw;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    background-color: var(--color-2);
+    background-image: radial-gradient(var(--color-7) 2px, transparent 2px), radial-gradient(var(--color-7) 2px, transparent 2px);
+    background-size: 100px 100px;
+    /* background-position: 0 0, 50px 50px; */
+    /* animation: backgroundAnimation 2s linear infinite; */
+    background-position: 0 0, 50px 50px;
+
+    background-color: var(--color-1);
+    background-attachment: fixed;
+}
+@keyframes backgroundAnimation{
+    0%{
+        background-position: 0 0, 50px 50px;
+    }
+    100%{
+        background-position: 0 -100px, -50px -50px;
+    }
 }
 /* NAVBAR */
 aside{
@@ -53,20 +70,16 @@ aside > a::before{
     content: '< >';
     margin-right: 10px;
     color: var(--color-4);
-    transition:  color 0.18s ease;
 }
 aside > a::after{
-    content: '</>';
+    content: ' / ';
     position: absolute;
-    left: 0;
-    color: transparent;
-    transition:  color 0.18s ease;
-}
-aside > a:hover::before{
+    left: 14.5px;
     color: transparent;
 }
-aside > a:hover::after{
-    color: var(--color-4);
+aside > a:hover::after, 
+a:hover::before{
+    color: var(--color-8);
 }
 
 /* CONTACTO */
@@ -94,7 +107,6 @@ aside > a:hover::after{
 }
 /* FIRST SECTION INTRODUCTION */
 .introduction{
-    background-color: var(--color-1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,8 +128,12 @@ aside > a:hover::after{
     font-weight: 300;
     text-transform: uppercase;
     position: relative;
+    overflow-x: hidden;
+    width: 0;
+    animation: typewriter 2s steps(22) 1s 1 normal forwards;
+    white-space: nowrap;
 }
-.introduction > h2::before,
+/* .introduction > h2::before,
 .introduction > h2::after{
     content: '';
     position: absolute;
@@ -126,7 +142,7 @@ aside > a:hover::after{
     right: 0;
     bottom: 0;
     animation: typewriter 2s steps(22) 1s 1 normal forwards;
-}
+} */
 .introduction > h2::before{
     background: var(--color-1);
     animation: typewriter 2s steps(22) 1s 1 normal forwards;
@@ -136,10 +152,13 @@ aside > a:hover::after{
     position: absolute;
     bottom: 40px;
     right: 60px;
-    font-size: 3em;
+    font-size: 1.5em;
+    border-radius: 50%;
+    padding: 20px;
     color: var(--color-4);
     transition: color 0.2s ease;
     animation: go_down 1s ease infinite;
+    background-color: var(--color-3);
 }
 
 
@@ -192,7 +211,7 @@ aside > a:hover::after{
 
 /* FOOTER */
 footer{
-    background-color: var(--color-3);
+    background-color: var(--color-8);
     height: 5em;
     width: 100vw;
     display: flex;
@@ -243,12 +262,6 @@ footer > a:hover{
         justify-content: center;
         padding: 10px 0;
     }
-    .go_down{
-        bottom: 10px !important;
-        right: 0 !important;
-        width: 100%;
-        text-align: center;
-    }
 }
 @media (max-width: 760px){
 
@@ -269,7 +282,10 @@ footer > a:hover{
     }
     .introduction > h2{
         font-size: 1.7em;
+        width: 0;
+        animation: typewriter2 2s steps(22) 1s 1 normal forwards;
     }
+    
     .contact{
         top: auto;
         margin: 0;
@@ -289,12 +305,33 @@ footer > a:hover{
 @media (max-width: 400px){
     .introduction > h2{
         font-size: 1.4em;
+        width: 0;
+        animation: typewriter3 2s steps(22) 1s 1 normal forwards;
     }
 }
 /* ANIMATIONS */
 @keyframes typewriter{
+    from{
+        width: 0;
+    }
     to{
-        left: 100%;
+        width: 422.4px;
+    }
+}
+@keyframes typewriter2{
+    from{
+        width: 0;
+    }
+    to{
+        width: 358.967px;
+    }
+}
+@keyframes typewriter3{
+    from{
+        width: 0;
+    }
+    to{
+        width: 295.9px;
     }
 }
 @keyframes go_down{
