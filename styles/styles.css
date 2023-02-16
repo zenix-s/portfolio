@@ -24,21 +24,37 @@ body{
     width: 100vw;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    background-image: radial-gradient(var(--color-7) 2px, transparent 2px), radial-gradient(var(--color-7) 2px, transparent 2px);
-    background-size: 100px 100px;
-    /* background-position: 0 0, 50px 50px; */
-    /* animation: backgroundAnimation 2s linear infinite; */
-    background-position: 0 0, 50px 50px;
-
-    background-color: var(--color-1);
+    background: 
+      linear-gradient(135deg,#0000 20.5%,var(--color-1) 0 29.5%,#0000 0) 0 50px,
+      linear-gradient( 45deg,#0000 8%,var(--color-1) 0 17%, #0000 0 58%) 100px 0,
+      linear-gradient(135deg,#0000 8%,var(--color-1) 0 17%, #0000 0 58%,var(--color-1) 0 67%,#0000 0),        
+      linear-gradient( 45deg,#0000 8%,var(--color-1) 0 17%, #0000 0 58%,var(--color-1) 0 67%,#0000 0 83%,var(--color-1) 0 92%,#0000 0),
+      var(--color-7);
+    background-size: 200px 200px;
     background-attachment: fixed;
+    /* animation: backgroundAnimation 2s linear infinite; */
+    transition: background 0.2s ease;
 }
 @keyframes backgroundAnimation{
     0%{
-        background-position: 0 0, 50px 50px;
+        background: 
+      linear-gradient(135deg,#0000 20.5%,var(--color-1) 0 29.5%,#0000 0) 0 50px,
+      linear-gradient( 45deg,#0000 8%,var(--color-1) 0 17%, #0000 0 58%) 100px 0,
+      linear-gradient(135deg,#0000 8%,var(--color-1) 0 17%, #0000 0 58%,var(--color-1) 0 67%,#0000 0),        
+      linear-gradient( 45deg,#0000 8%,var(--color-1) 0 17%, #0000 0 58%,var(--color-1) 0 67%,#0000 0 83%,var(--color-1) 0 92%,#0000 0),
+      var(--color-2);
+      background-size: 200px 200px;
+        
     }
     100%{
-        background-position: 0 -100px, -50px -50px;
+        background: 
+      linear-gradient(45deg,#0000 20.5%,var(--color-1) 0 29.5%,#0000 0) 0 50px,
+      linear-gradient( 135deg,#0000 8%,var(--color-1) 0 17%, #0000 0 58%) 100px 0,
+      linear-gradient(45deg,#0000 8%,var(--color-1) 0 17%, #0000 0 58%,var(--color-1) 0 67%,#0000 0),        
+      linear-gradient( 135deg,#0000 8%,var(--color-1) 0 17%, #0000 0 58%,var(--color-1) 0 67%,#0000 0 83%,var(--color-1) 0 92%,#0000 0),
+      var(--color-2);
+      background-size: 200px 200px;
+
     }
 }
 /* NAVBAR */
@@ -120,11 +136,7 @@ a:hover::before{
     font-weight: 300;
     text-transform: uppercase;
     padding: 10px 10px;
-    background-color: rgba(0, 0, 0, 0.426);
-    -webkit-box-shadow: 0 0 32px 32px #00000070;
-    -moz-box-shadow: 0 0 32px 32px #0000006b;
-    box-shadow: 0 0 32px 32px #00000069;
-    backdrop-filter: blur(1px);
+    /* backdrop-filter: blur(1px); */
     
 }
 .introduction > h2{
