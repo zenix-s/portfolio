@@ -1,4 +1,4 @@
-const blob = document.querySelectorAll('.hideBlob');
+const blob = document.querySelectorAll('.blob');
 let width = window.innerWidth;
 let height = window.innerHeight;
 

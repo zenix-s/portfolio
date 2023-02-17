@@ -29,7 +29,7 @@ body{
     background: rgb(var(--back-1));
     z-index: 1;
 }
-.hideBlob{
+.blob{
     height: 150px;
     width: 150px;
     position: absolute;
@@ -215,7 +215,7 @@ a:hover::before{
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
-    /* background-color: var(--color-4); */
+    background-color: rgb(255 255 255 / 75%);
     padding: 20px;
     border-radius: 10px;
     width: 40%;
