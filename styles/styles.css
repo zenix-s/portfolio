@@ -11,6 +11,7 @@
     --color-8: #df6767;
     --color-9: #ff0000;
     --back-1 : 23, 24, 29;
+    --starcolor: 255, 255, 255;
 }
 html{
     scroll-behavior: smooth;
@@ -26,25 +27,23 @@ body{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     background: rgb(var(--back-1));
-    /* background-attachment: fixed; */
-    /* backdrop-filter: blur(20px); */
     z-index: 1;
 }
 .hideBlob{
-    height: 400px;
-    width: 400px;
+    height: 150px;
+    width: 150px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -10;
     border-radius: 50%;
-    background: linear-gradient(
-            to right,
-            rgba(36, 36, 255, 0.3),
-            rgba(255, 42, 42, 0.3)
+    background: radial-gradient(
+        rgba(var(--starcolor), 1) 0%,
+        rgba(var(--starcolor), 0.75) 50%,
+        rgb(var(--starcolor), 0.15) 100%
     );
-    /* animation: blob 10s infinite; */
+    animation: blob 10s infinite;
 }
 @keyframes blob{
     0%{
@@ -60,6 +59,7 @@ body{
 main{
     z-index: 10;
     backdrop-filter: blur(200px);
+    overflow-x: hidden;
     
 }
 /* NAVBAR */
