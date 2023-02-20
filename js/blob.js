@@ -11,6 +11,16 @@ window.onload = function() {
     blob.forEach(function(item) {
         item.style.top = Math.random() * height + 'px';
         item.style.left = Math.random() * width + 'px';
+        item.animate([
+            { 
+                top : Math.random() * height + 'px',
+                left : Math.random() * width + 'px',
+            }
+        ], {
+            duration: 10000,
+            fill: 'forwards'
+            
+        });
     });
 }
 
@@ -22,9 +32,9 @@ setInterval(function() {
                 left : Math.random() * width + 'px',
             }
         ], {
-            duration: 5000,
+            duration: 10000,
             fill: 'forwards'
             
         });
     });
-}, 5000);
+}, 10000);

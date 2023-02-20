@@ -30,36 +30,28 @@ body{
     z-index: 1;
 }
 .blob{
-    height: 150px;
-    width: 150px;
+    height: 450px;
+    width: 450px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -10;
     border-radius: 50%;
-    background: radial-gradient(
-        rgba(var(--starcolor), 1) 0%,
-        rgba(var(--starcolor), 0.75) 50%,
-        rgb(var(--starcolor), 0.15) 100%
+    background: linear-gradient(
+        45deg,
+        rgba(92, 94, 204, 0.26) 0%,
+        /* rgba(22, 209, 5, 0.384) 50%, */
+        rgba(192, 84, 84, 0.247) 100%
     );
-    animation: blob 10s infinite;
-}
-@keyframes blob{
-    0%{
-        transform: translate(-50%, -50%) scale(1) rotate(0deg);
-    }
-    50%{
-        transform: translate(-50%, -50%) scale(1.5) rotate(180deg);
-    }
-    100%{
-        transform: translate(-50%, -50%) scale(1) rotate(360deg);
-    }
+    box-shadow: 0 0 10px 25px rgba(111, 183, 192, 0.2);
+    filter: blur(10px);
 }
 main{
     z-index: 10;
-    backdrop-filter: blur(200px);
+    backdrop-filter: blur(50px);
     overflow-x: hidden;
+    
     
 }
 /* NAVBAR */
@@ -192,49 +184,95 @@ a:hover::before{
 
 
 
-/* SECOND SECTION ABOUT ME */
-.about_me{
-    /* background-color: var(--color-2); */
+/* PROYECTOS */
+
+#proyectos{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-
+    padding: 10px 0;
+    position: relative;
 }
-.about_me > h2{
-    font-size: 5em;
+#proyectos > h2{
+    font-size: 3em;
     color: var(--color-4);
     margin: 10px 0;
     font-weight: 300;
     text-transform: uppercase;
-    font-family: 'roboto mono', monospace;
+    padding: 10px 10px;
+    /* backdrop-filter: blur(1px); */
+    
 }
-.about_me_container{
+.proyectos_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    /* align-items: center; */
+    justify-items: center;
+    width: 100%;
+}
+.proyectos_container > .proyecto{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    background-color: rgb(255 255 255 / 75%);
-    padding: 20px;
-    border-radius: 10px;
-    width: 40%;
-}
-.about_me_container > p{
-    font-size: 1.2em;
-    color: var(--color-1);
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+    /* background-color: white; */
+    width: 500px;
+    height: 100%;
+    aspect-ratio: 1.5/1;
     margin: 10px 0;
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+.proyectos_container > .proyecto:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 10px var(--color-4);
+
+}
+.proyectos_container > .proyecto > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border: none;
+    top: 0;
+    left: 0;
+    /* display: none; */
+}
+.proyectos_container > .proyecto > .proyecto_info{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    z-index: 3;
+    color: rgb(255, 255, 255);
+    height: 40%;
+    background-color: rgba(23, 24, 29, 0.61);
+    text-align: left;
+    font-size: 1.5em;
     font-weight: 300;
     text-transform: uppercase;
-    font-family: 'roboto', sans-serif;
+    transition: color 0.2s ease;
+    backdrop-filter: blur(5px);
 }
-
-
-/* THIRD SECTION PROYECTS */
-
-/* FOURTH SECTION SKILLS */
-
-/* FIFTH SECTION CONTACT */
+.proyectos_container > .proyecto > .proyecto_info > h3{
+    font-size: 1.5em;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.proyectos_container > .proyecto > .proyecto_info > p{
+    font-size: 0.7em;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
 
 /* FOOTER */
 footer{
