@@ -1,0 +1,37 @@
+---
+import Card from "./Card.astro";
+const proyectos = [
+  {
+    name: "Proyecto 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultricies, nunc nisl aliquam nunc, vitae al",
+    href: "https://www.google.com",
+    hrefText: "Ver más",
+    img: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Proyecto 2",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultricies, nunc nisl aliquam nunc, vitae al",
+    href: "https://www.google.com",
+    hrefText: "Ver más",
+    img: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Proyecto 3",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultricies, nunc nisl aliquam nunc, vitae al",
+    href: "https://www.google.com",
+    hrefText: "Ver más",
+    img: "https://via.placeholder.com/150",
+  },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {
+    proyectos.map((proyecto) => (
+      <Card {...proyecto} />
+    ))
+  }
+</div>

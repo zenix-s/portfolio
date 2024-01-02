@@ -1,23 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import '@fontsource-variable/inter';
-import SectionContainer from '../components/SectionContainer.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import "@fontsource-variable/inter";
+import SectionContainer from "../components/SectionContainer.astro";
+import SeccionProyectos from "../components/SeccionProyectos.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
+  <main>
     <SectionContainer>
       <h1 class="text-2xl">Sergio Fernández Fernández</h1>
+      <!-- contexto un portfolio de desarrollador junior full stack -->
+      <p>
+        Estudiante en 42 Madrid. <sapn>Desarrollador web.</sapn> <span>De Madrid.</span> 
+      </p>
     </SectionContainer>
     <SectionContainer>
-      
+      <h2>Proyectos</h2>
+      <SeccionProyectos />
     </SectionContainer>
-	</main>
+  </main>
 </Layout>
 
 <style>
-	main {
-
-	}
+  main {
+  }
 </style>
