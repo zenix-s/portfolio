@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://zenix-s.github.io',
-  base: '/my-repo',
+  // base: '/my-repo',
 });
